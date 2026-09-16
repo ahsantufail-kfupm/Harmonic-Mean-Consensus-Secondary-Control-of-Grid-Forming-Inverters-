@@ -14,7 +14,7 @@ scripts in this repository.
 
 | File | What it reproduces |
 |---|---|
-| `paper1_reproduce.m` | Main script (Sections A–K): Scenarios 1–8 and Tables 2–3 (A, I); no-overload/minimax study, Fig. 4 (B); power-mean ordering on the test graph (C); predictor–corrector round-halving (D); inertia/connectivity sensitivity, Fig. 11 (G); frequency-recoverability limit, Fig. 12 (F); IEEE 14-bus study, Fig. 13 (H); sensitivity suite — packet loss, ±20 % parameter Monte-Carlo, measurement bias, communication partition, transient saturation — Section 10.15 and Fig. 15 (J); 500-graph random ensemble statistics for Table 3 and Remarks 3–5, plus the fastest-mixing-chain and equal-budget SDP benchmarks of Section 10.10 and Fig. 10 (K). Section K also verifies the Theorem-4 damping bound numerically over 2×10⁵ random samples. |
+| `paper1_reproduce_reviewer.m` | Main script (Sections A–K): Scenarios 1–8 and Tables 2–3 (A, I); no-overload/minimax study, Fig. 4 (B); power-mean ordering on the test graph (C); predictor–corrector round-halving (D); inertia/connectivity sensitivity, Fig. 11 (G); frequency-recoverability limit, Fig. 12 (F); IEEE 14-bus study, Fig. 13 (H); sensitivity suite — packet loss, ±20 % parameter Monte-Carlo, measurement bias, communication partition, transient saturation — Section 10.15 and Fig. 15 (J); 500-graph random ensemble statistics for Table 3 and Remarks 3–5, plus the fastest-mixing-chain and equal-budget SDP benchmarks of Section 10.10 and Fig. 10 (K). Section K also verifies the Theorem-4 damping bound numerically over 2×10⁵ random samples. |
 | `constudy.m` | Method-level comparison of Section 10.3, Fig. 3: proposed law vs. frequency-DAPI, event-triggered per-unit consensus, and PI-consensus, implemented per Appendix A. |
 | `head_to_head.m` | Head-to-head closed-loop comparison of Section 10.9, Fig. 9 (proposed vs. Metropolis-weighted comparators; Perron spectral radii; Fig. 8 decay comparison). |
 | `verify_thm1_normalized.py` | Exact source of Remark 4's equal-budget statistics (harmonic family-best in 384/500 graphs, mean ratio 0.9906, minimum 0.7960) at numpy seed 7, under the ensemble law stated in Section 10.7. |
@@ -31,7 +31,7 @@ scripts in this repository.
 ## How to run
 
 ```
->> paper1_reproduce      % runs Sections A–K, prints all metrics, saves all figures
+>> paper1_reproduce_reviewer      % runs Sections A–K, prints all metrics, saves all figures
 >> constudy              % Fig. 3 comparison
 >> head_to_head          % Figs. 8–9 comparison
 
